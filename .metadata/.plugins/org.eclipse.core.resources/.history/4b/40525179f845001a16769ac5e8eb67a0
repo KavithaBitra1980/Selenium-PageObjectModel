@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.letKodeit.Tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.letskodeit.Pages.LoginPage;
+
+/**
+ * @author Kavitha Bitra
+ * This testCases is to login the user by providing userName and Password
+ *
+ */
+public class userLogin {
+	
+	
+	String baseURL = "https://learn.letskodeit.com/";
+	
+	public boolean verifyLogin() {
+		WebDriver driver = new FirefoxDriver();
+		driver.get(baseURL);
+		driver.manage().window().maximize();
+		
+		LoginPage newLogin = new LoginPage(driver);
+		newLogin.verifyUserLogin();
+		driver.close();
+	}
+	
+
+}

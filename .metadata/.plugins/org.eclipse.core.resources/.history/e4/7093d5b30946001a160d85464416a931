@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+/**
+ * @author Bitra
+ * This page is for Practice page for the test website.
+ * The page contains all objects related to practice page
+ *
+ */
+public class practicePage {
+	
+	Webdriver driver;
+	
+	By pageTitle = By.
+	
+	public boolean
+
+}

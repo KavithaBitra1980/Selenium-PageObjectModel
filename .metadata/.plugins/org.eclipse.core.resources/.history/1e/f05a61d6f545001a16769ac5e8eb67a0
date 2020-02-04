@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+import org.openqa.selenium.By;
+
+/**
+ * @author Kavitha Bitra
+ * This class will store all locators and methods of Login Page
+ */
+public class LoginPage {
+
+	By  loginLink = By.className("fedora-navbar-link navbar-link");
+	By EmailAddress = By.id("user_email");
+	By passWord = By.id("user_password");
+	By loginButton = By.name("commit");

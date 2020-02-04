@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+/**
+ * @author Bitra
+ *
+ */
+public class BasePage {
+	
+	WebDriver driver = new FirefoxDriver();
+	String baseURL = "https://learn.letskodeit.com/";
+	driver.get(baseURL);
+	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	driver.manage().window().maximize();
+
+}

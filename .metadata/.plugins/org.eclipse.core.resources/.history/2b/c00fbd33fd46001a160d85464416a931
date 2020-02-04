@@ -1,0 +1,145 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+/**
+ * @author Bitra
+ *
+ */
+public class expediaPage {
+	WebDriver driver;
+	
+	By flightsButton = By.xpath("//button[@id='tab-flight-tab-hp']");
+    By utilities = By.xpath("//ul[contains(@class,'utility-nav nav-group cf')]");
+    By flyingFrom = By.xpath("(//input[@placeholder='City or airport'])[1]");
+    By flyingTo = By.xpath("//input[@data-ta_element='flight-destination-hp-flight-ta']");
+    By mutiDisplayClick = By.xpath("//a[@id='aria-option-0']//div[contains(@class,'multiLineDisplay details')]");
+    By departingDate = By.xpath("//input[@id='flight-departing-hp-flight']");
+    By departingDatePicker = By.xpath("(//button[@class='datepicker-cal-date'])[10]");
+    By returningDate = By.xpath("//input[@id='flight-returning-hp-flight']");
+    By returningDatePicker = By.xpath("(//button[@class='datepicker-cal-date'])[20]");
+    By noOfTravelers = By.xpath("(//button[@data-gcw-component='gcw-traveler-amount-select'])[1]");
+    By noOfAdults = By.xpath("//body[@class='wrap cf aoa-enabled']/meso-native-marquee/section[@id='WizardHero']/div[@id='hero-banner']/div[@class='hero-banner-gradient native-marquee']/div[@class='cols-row hero-banner-inner']/section[@id='wizardSection']/div[@class='hero-banner-box siteId-1 cf hideClassicDcol']/div[@id='wizard-tabs']/div[@class='tabs-container col']/section[@id='section-flight-tab-hp']/form[@id='gcw-flights-form-hp-flight']/fieldset[@class='room-data']/div[@class='cols-nested']/div[@class='ab25184-traveler-wrapper-flight available-for-flights gcw-clear-both']/div[@id='traveler-selector-hp-flight']/div[@class='menu-bar gcw-travel-selector-wrapper']/ul[@class='menu-bar-inner']/li[@class='open']/div[@class='menu sticky gcw-menu']/div[@class='menu-main']/div[@class='traveler-selector-sinlge-room-data traveler-selector-room-data']/div[@class='uitk-grid step-input-outside gcw-component gcw-component-step-input gcw-step-input gcw-component-initialized']/div[@class='uitk-col all-col-shrink']/button[@class='uitk-step-input-button uitk-step-input-plus']/span[@class='uitk-icon']/*[1] ");
+    By noOfChildren = By.xpath("//div[@class='traveler-selector-sinlge-room-data traveler-selector-room-data']//div[@class='children-wrapper']//div[@class='uitk-grid step-input-outside gcw-component gcw-component-step-input gcw-step-input gcw-component-initialized']//button[@class='uitk-step-input-button uitk-step-input-plus']//*[@class='uitk-icon-svg uitk-step-input-icon'] ");
+    By noOfInfants = By.xpath("//div[@class='traveler-selector-sinlge-room-data traveler-selector-room-data']//div[@class='infants-wrapper']//button[@class='uitk-step-input-button uitk-step-input-plus']//*[@class='uitk-icon-svg uitk-step-input-icon'] \r\n" + 
+    		"  Abs XPath /html[1]/body[1]/meso-native-marquee[1]/section[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/section[1]/form[1]/fieldset[2]/div[1]/div[4]/div[1]/div[1]/ul[1]/li[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[4]/button[1]/span[1]/*");
+    By searchButton = By.xpath("//form[@id='gcw-flights-form-hp-flight']//button[@class='btn-primary btn-action gcw-submit']");
+    
+    public expediaPage(WebDriver driver) {
+		this.driver=driver;
+	}
+	
+	public boolean clickOnFlightsLink() {
+		try {
+			System.out.println (" Clicking on Flights Link");
+			WebDriverWait wait = new WebDriverWait (driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(flightsButton)).click();
+			//driver.findElement(flightsButton).click();
+			System.out.println (" Flights got clicked");
+			return true;
+		}
+		catch ( Exception e) {
+			System.out.println (" Link not found " +e.getMessage());
+			return false;
+			
+		}
+	}
+	public String getAllElements() {
+		try {
+			System.out.println (" Getting all elements");
+			 System.out.println( driver.findElement(utilities).getText());
+			 return "elements returned";
+			
+		}catch ( Exception e) {
+			System.out.println (" error " +e.getMessage());
+			return "NULL- Not Found";
+			
+		}
+	}
+	public void flyingTo() {
+		try {
+			System.out.println("Selecting Flying To");
+			WebDriverWait wait = new WebDriverWait (driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(flyingTo)).click();
+			//driver.findElement(flyingFrom).click();
+			driver.findElement(flyingFrom).sendKeys("HYD");
+			driver.findElement(mutiDisplayClick).click();
+			System.out.println( " element send keys");
+		}catch ( Exception e) {
+			System.out.println (" error " +e.getMessage());
+			
+		}
+	}
+	public void flyingFrom() {
+		try {
+			System.out.println("Selecting Flying from");
+			WebDriverWait wait = new WebDriverWait (driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(flyingFrom)).click();
+			//driver.findElement(flyingFrom).click();
+			driver.findElement(flyingFrom).sendKeys("IAD");
+			driver.findElement(mutiDisplayClick).click();
+			System.out.println( " element send keys");
+		}catch ( Exception e) {
+			System.out.println (" error " +e.getMessage());
+			
+		}
+	}
+	public void departingDateselection() {
+		try {
+			System.out.println("Selcting Departing date");
+			driver.findElement(departingDate).click();
+			driver.findElement(departingDatePicker).click();
+			System.out.println (" Departing date got selected");
+		}
+		catch (Exception e) {
+			System.out.println("Date picker error" +e.getMessage());
+			
+			
+		}
+	}
+	
+	public void returningDateselection() {
+		try {
+			System.out.println("Selcting Departing date");
+			driver.findElement(returningDate).click();
+			driver.findElement(returningDatePicker).click();
+			System.out.println (" Departing date got selected");
+		}
+		catch (Exception e) {
+			System.out.println("Date picker error" +e.getMessage());
+			
+			
+		}
+	}
+	
+	public void selectTravellers() {
+		try {
+			System.out.println("Selecting No of Travellers");
+			driver.findElement(noOfAdults).click();
+			driver.findElement(noOfChildren).click();
+			driver.findElement(noOfInfants).click();
+		}
+		catch (Exception e) {
+			System.out.println("Travellers error" +e.getMessage());
+			
+		}
+	}
+	public void clickOnSearchButton() {
+		try {
+			System.out.println("Clicking on Search Button");
+			driver.findElement(searchButton).click();
+			
+		}
+	catch (Exception e) {
+		System.out.println("search button not found error" +e.getMessage());
+		
+	}
+	}
+}
+

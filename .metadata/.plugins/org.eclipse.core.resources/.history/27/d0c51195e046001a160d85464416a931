@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author Bitra
+ *
+ */
+public class expediaPage {
+	WebDriver driver;
+	
+	By flightsButton = By.xpath("//button[@id='tab-flight-tab-hp']");
+	
+	
+	public boolean clickOnFlightsLink() {
+		try {
+			System.out.println (" Clicking on Flights Link");
+			driver.findElement(flightsButton).click();
+			System.out.println (" Flights got clicked");
+		}
+		catch ( Exception e) {
+			System.out.println (" Link not found " +e.getMessage());
+			return false;
+			
+		}
+	}
+
+}

@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author Bitra
+ *
+ */
+public class automationPracticePage {
+	WebDriver driver;
+	By womenLink = By.xpath("//a[@class='sf-with-ul'][contains(text(),'Women')]");
+	By WomenTitle = By.xpath("//h2[@class='title_block']");
+	
+	public void clickOnWomenLink() {
+		try {
+			System.out.println (" Clicking on womens Link");
+			driver.findElement(womenLink).click();
+			Thread.sleep(5000);
+			System.out.println (" Women Link got clicked");
+			
+		}
+		catch ( Exception e) {
+			System.out.println (" Link not found " +e.getMessage());
+			
+		}
+	}
+	
+	public boolean verifyWomenLink(){
+		try {
+			System.out.println("Verifying Womens Link");
+			return driver.findElement(WomenTitle).getText().contentEquals("Women");
+			
+		}catch ( Exception e) {
+			System.out.println (" The Title Does not match " +e.getMessage());
+			return false;
+			
+		}
+	
+	}
+
+}

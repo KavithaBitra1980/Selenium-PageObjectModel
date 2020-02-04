@@ -1,0 +1,22 @@
+package com.letKodeit.Tests;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.letskodeit.Pages.LoginPage;
+
+public class userLoginAccess {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LoginPage login = new LoginPage(driver);
+		
+		}	
+	
+	}
+}

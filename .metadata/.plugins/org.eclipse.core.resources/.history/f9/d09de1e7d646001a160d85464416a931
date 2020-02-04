@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+
+/**
+ * @author Bitra
+ *
+ */
+public class BasePage {
+	
+	WebDriver driver;
+	
+	public void waitforPageLoaded() {
+	{
+		 ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
+			 public Boolean apply (WebDriver driver) {
+				 return((JavascriptExecutor)driver).executeScript("returndocument.readyState").
+			 }
+		 }
+		
+	}
+	public void loadURL() {
+		
+	}
+
+}

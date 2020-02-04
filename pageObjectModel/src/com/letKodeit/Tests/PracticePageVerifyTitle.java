@@ -1,0 +1,34 @@
+package com.letKodeit.Tests;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.letskodeit.Pages.BasePage;
+import com.letskodeit.Pages.LoginPage;
+import com.letskodeit.Pages.practicePage;
+
+public class PracticePageVerifyTitle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new FirefoxDriver();
+		String baseURL = "https://learn.letskodeit.com/";
+		driver.get(baseURL);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		
+		BasePage bp = new BasePage();
+	
+		
+		practicePage pp = new practicePage();
+		
+		pp.clickOnPracticeLink();
+		pp.verifyPageTitle();
+		
+
+	}
+
+}

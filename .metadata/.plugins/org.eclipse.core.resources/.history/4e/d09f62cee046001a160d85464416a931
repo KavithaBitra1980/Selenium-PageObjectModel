@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.letKodeit.Tests;
+
+/**
+ * @author Bitra
+ *
+ */
+public class selectFlight {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

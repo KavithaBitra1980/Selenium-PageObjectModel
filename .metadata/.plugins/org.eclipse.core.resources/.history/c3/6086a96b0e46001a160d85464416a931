@@ -1,0 +1,19 @@
+package com.letKodeit.Tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.letskodeit.Pages.practicePage;
+
+public class PracticePageVerifyTitle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		userLoginAccess access = new practicePage();
+		practicePage pp = new practicePage();
+		
+
+	}
+
+}

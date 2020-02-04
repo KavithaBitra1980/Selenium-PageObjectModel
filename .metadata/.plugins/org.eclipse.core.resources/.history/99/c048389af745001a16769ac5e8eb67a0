@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.letKodeit.Tests;
+
+/**
+ * @author Kavitha Bitra
+ * This testCases is to login the user by provididng userName and Password
+ *
+ */
+public class userLogin {
+
+}

@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package com.letKodeit.Tests;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.letskodeit.Pages.automationPracticePage;
+
+/**
+ * @author Bitra
+ * This test to veryfy Women Link
+ *
+ */
+public class verifyWomenLink {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         
+		WebDriver driver = new FirefoxDriver();
+		String baseURL = "http://automationpractice.com/index.php";
+		driver.get(baseURL);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		
+		automationPracticePage ap = new automationPracticePage(driver);
+		ap.clickOnWomenLink();
+		ap.verifyWomenLink();
+		
+		
+	}
+
+}

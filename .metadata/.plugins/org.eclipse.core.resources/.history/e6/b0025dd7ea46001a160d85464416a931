@@ -1,0 +1,54 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+/**
+ * @author Bitra
+ *
+ */
+public class expediaPage {
+	WebDriver driver;
+	
+	By flightsButton = By.xpath("//button[@id='tab-flight-tab-hp']");
+    By utilities = By.xpath("//ul[contains(@class,'utility-nav nav-group cf')]");
+    
+    public expediaPage(WebDriver driver) {
+		this.driver=driver;
+	}
+	
+	public boolean clickOnFlightsLink() {
+		try {
+			System.out.println (" Clicking on Flights Link");
+			WebDriverWait wait = new WebDriverWait (driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(flightsButton)).click();
+			//driver.findElement(flightsButton).click();
+			
+			System.out.println (" Flights got clicked");
+			return true;
+		}
+		catch ( Exception e) {
+			System.out.println (" Link not found " +e.getMessage());
+			return false;
+			
+		}
+	}
+	public String getAllElements() {
+		try {
+			System.out.println (" Getting all elements");
+			 System.out.println( driver.findElement(utilities).getText());
+			 return "elements returned";
+			
+		}catch ( Exception e) {
+			System.out.println (" error " +e.getMessage());
+			return "NULL- Not Found";
+			
+		}
+	}
+
+}

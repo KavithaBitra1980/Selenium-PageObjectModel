@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.letskodeit.Pages;
+
+/**
+ * @author Kavitha Bitra
+ * This class will store all locators and methods of Login Page
+ */
+public class LoginPage {
+
+	By.
+}

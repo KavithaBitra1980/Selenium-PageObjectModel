@@ -1,0 +1,30 @@
+package com.letKodeit.Tests;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.letskodeit.Pages.LoginPage;
+
+public class userLoginAccess {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		@T
+		public void verifyUserLogin() {
+			String baseURL = "https://learn.letskodeit.com/";
+			WebDriver driver = new FirefoxDriver();
+			driver.get(baseURL);
+			driver.manage().window().maximize();
+			
+			LoginPage newLogin = new LoginPage(driver);
+			newLogin.verifyUserLogin();
+			driver.close();
+		}
+		
+	}
+
+}

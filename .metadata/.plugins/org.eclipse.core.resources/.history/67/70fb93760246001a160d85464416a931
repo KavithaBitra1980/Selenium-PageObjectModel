@@ -1,0 +1,42 @@
+package com.letKodeit.Tests;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.letskodeit.Pages.LoginPage;
+
+public class userLoginAccess {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		By  loginLink = By.linkText("Login");
+		By EmailAddress = By.xpath("//input[@id='user-email']");
+		By passWord = By.id("user_password");
+		By loginButton = By.name("commit");
+		
+			
+			String baseURL = "https://learn.letskodeit.com/";
+			WebDriver driver = new FirefoxDriver();
+			driver.get(baseURL);
+			driver.manage().window().maximize();
+			try {
+			System.out.println(" The user is trying to Login");
+			driver.findElement(loginLink).click();
+			driver.wait(1000);
+			driver.findElement(EmailAddress).click();
+			driver.findElement(EmailAddress).sendKeys("testusername123");
+			driver.wait(1000);
+			driver.findElement(passWord).sendKeys("testabc");
+			driver.findElement(loginButton).click();
+			
+			
+		}catch ( Exception e) {
+			System.out.println (" The user is not able to login " +e.getMessage());
+			
+		}	
+	
+
+}
