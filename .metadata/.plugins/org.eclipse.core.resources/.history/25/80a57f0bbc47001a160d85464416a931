@@ -26,10 +26,7 @@ public class PracticePageVerifyTitle {
 		practicePage pp = new practicePage(driver);
 		
 		pp.clickOnPracticeLink();
-		System.out.println(pp.verifyPageTitle());
-		pp.selectBMWRadioButton();
-		pp.selectBenzFromDrpDwn();
-		pp.selectHondaCheckbox();
+		pp.verifyPageTitle();
 		
 
 	}

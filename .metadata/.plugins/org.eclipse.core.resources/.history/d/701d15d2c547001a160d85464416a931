@@ -28,7 +28,7 @@ public class practicePage {
 	//By BMWRadioButton = By.xpath("//div[@id='radio-btn-example']//label[1]");
 	By BMWRadioButton = By.xpath("//input[@id='bmwradio']");
 	static By dropDown = By.xpath("//select[@id='carselect']");
-	By hondaCheckBox = By.xpath("//input[@id='hondacheck']");
+	By hondaCheckBox = By.xpath("//div[@id='checkbox-example']//label[3]");
 	
 	public  practicePage(WebDriver driver) {
 		this.driver = driver;

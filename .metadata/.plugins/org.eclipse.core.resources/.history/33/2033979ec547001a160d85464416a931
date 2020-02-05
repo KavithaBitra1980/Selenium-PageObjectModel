@@ -29,7 +29,6 @@ public class PracticePageVerifyTitle {
 		System.out.println(pp.verifyPageTitle());
 		pp.selectBMWRadioButton();
 		pp.selectBenzFromDrpDwn();
-		pp.selectHondaCheckbox();
 		
 
 	}

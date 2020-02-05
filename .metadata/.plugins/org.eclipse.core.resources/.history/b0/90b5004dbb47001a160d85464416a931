@@ -35,7 +35,7 @@ public class verifyWomenLink {
 		ap.verifyWomenLink();
 		ap.hoverOnImage();
 		ap.addtoCart();
-		driver.close();
+		
 		
 	}
 

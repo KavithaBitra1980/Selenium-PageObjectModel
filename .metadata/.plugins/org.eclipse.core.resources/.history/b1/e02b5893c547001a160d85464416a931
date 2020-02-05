@@ -28,7 +28,6 @@ public class practicePage {
 	//By BMWRadioButton = By.xpath("//div[@id='radio-btn-example']//label[1]");
 	By BMWRadioButton = By.xpath("//input[@id='bmwradio']");
 	static By dropDown = By.xpath("//select[@id='carselect']");
-	By hondaCheckBox = By.xpath("//input[@id='hondacheck']");
 	
 	public  practicePage(WebDriver driver) {
 		this.driver = driver;
@@ -89,13 +88,4 @@ public class practicePage {
 		}
 	}
 	
-	public void selectHondaCheckbox() {
-		try {
-			System.out.println(" Select Honda Option");
-			driver.findElement(hondaCheckBox).click();
-			System.out.println(" Honda got clicked");		
-		}catch ( Exception e) {
-			System.out.println (" The Honda not found " +e.getMessage());
-		}
-	}
 }
