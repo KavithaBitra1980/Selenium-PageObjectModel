@@ -15,10 +15,10 @@ public class PracticePageVerifyTitle {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		WebDriver driver = new FirefoxDriver();
+		//WebDriver driver = new FirefoxDriver();
 		String baseURL = "https://learn.letskodeit.com/";
-		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
-		//WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.get(baseURL);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -34,8 +34,7 @@ public class PracticePageVerifyTitle {
 		pp.selectBenzFromDrpDwn();
 		pp.selectHondaCheckbox();
 		//pp.switchtoNewWindow();
-		//pp.switchToNewTab();
-		pp.switchToAlert();
+		pp.switchToNewTab();
 		
 
 	}

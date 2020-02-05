@@ -3,7 +3,6 @@ package com.letKodeit.Tests;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.letskodeit.Pages.BasePage;
@@ -17,8 +16,6 @@ public class PracticePageVerifyTitle {
 		
 		WebDriver driver = new FirefoxDriver();
 		String baseURL = "https://learn.letskodeit.com/";
-		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
-		//WebDriver driver = new ChromeDriver();
 		driver.get(baseURL);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -33,9 +30,7 @@ public class PracticePageVerifyTitle {
 		pp.selectBMWRadioButton();
 		pp.selectBenzFromDrpDwn();
 		pp.selectHondaCheckbox();
-		//pp.switchtoNewWindow();
-		//pp.switchToNewTab();
-		pp.switchToAlert();
+		pp.switchtoNewWindow();
 		
 
 	}

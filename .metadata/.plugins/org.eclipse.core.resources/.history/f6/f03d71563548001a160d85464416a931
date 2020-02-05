@@ -34,8 +34,7 @@ public class PracticePageVerifyTitle {
 		pp.selectBenzFromDrpDwn();
 		pp.selectHondaCheckbox();
 		//pp.switchtoNewWindow();
-		//pp.switchToNewTab();
-		pp.switchToAlert();
+		pp.switchToNewTab();
 		
 
 	}

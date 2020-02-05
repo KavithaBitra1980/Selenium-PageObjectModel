@@ -42,7 +42,6 @@ public class practicePage {
 		this.driver = driver;
 		
 	}
-	//method to verify a title
 	public boolean verifyPageTitle() {
 		try {
 			
@@ -54,7 +53,6 @@ public class practicePage {
 		}
 	}
 	
-	//method to click on a link
 	
 	public void clickOnPracticeLink() {
 		try {
@@ -87,7 +85,6 @@ public class practicePage {
 		}
 			
 	}
-	//Method for selecting from drop down
 	public void selectBenzFromDrpDwn() {
 		try {
 			System.out.println (" Selecting benz from Drop down");
@@ -99,7 +96,7 @@ public class practicePage {
 			System.out.println (" The carModel drop down not found " +e.getMessage());
 		}
 	}
-	//method for clicking on check boxed
+	
 	public void selectHondaCheckbox() {
 		try {
 			System.out.println(" Select Honda Option");
@@ -109,7 +106,7 @@ public class practicePage {
 			System.out.println (" The Honda not found " +e.getMessage());
 		}
 	}
-	//method to switch to new window
+	
 	public void switchtoNewWindow() {
 		try {
 			System.out.println(" Switching to new window");
@@ -133,7 +130,6 @@ public class practicePage {
 		System.out.println (" The window element not found " +e.getMessage());
 	}
   }
-	//method to switch to  new tab
 	public void switchToNewTab() {
 		try {
 			System.out.println("Switching to new tab");
@@ -151,17 +147,14 @@ public class practicePage {
 			System.out.println (" The tab element not found " +e.getMessage());
 		}
 	}
-	
-	// method for Scrolling a window
 	public void scrollWindow() {
 		try {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,100)");
+			js.executeScript("window.scrollBy(0,1000)");
 		}catch ( Exception e) {
 			System.out.println (" The javascript didnt work " +e.getMessage());
 		}
 	}
-	//method for Switch to an alert and accept the alert
 	public void switchToAlert() {
 		try {
 			System.out.println("Switching to alerts");
